@@ -96,7 +96,7 @@ Make it animate nicely. You'll need CSS3 for this*/
 	transform: rotate(180deg);
 	-webkit-transform: rotate(180deg);
 
-	transition: all 1s ease;
+	/**transition: all 1s ease;**/
 }
 
 /*Add CSS styles to rotate the element 270deg
