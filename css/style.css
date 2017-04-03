@@ -57,7 +57,7 @@ body {
 #prevPhoto:hover {
 	height: 42px;
 	width: 42px;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 #nextPhoto {
@@ -69,7 +69,7 @@ body {
 #nextPhoto:hover {
 	height: 42px;
 	width: 42px;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 .details p {
