@@ -42,6 +42,8 @@ function swapPhoto() {
       mCurrentIndex++;
   } else {
     mCurrentIndex = 0;
+    $('.thumbnail').attr("src", mImages[mCurrentIndex].img)
+    mCurrentIndex++;
   }
 	console.log('swap photo');
 }
