@@ -40,7 +40,9 @@ function swapPhoto() {
   if(mCurrentIndex < mImages.length){
       $('.thumbnail').attr("src", mImages[mCurrentIndex].img);
       mCurrentIndex++;
-  } 
+  } else {
+    mCurrentIndex = 0;
+  }
 	console.log('swap photo');
 }
 
