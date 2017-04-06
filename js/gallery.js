@@ -37,6 +37,7 @@ function swapPhoto() {
 	//Access the img element and replace its source
 	//with a new image from your images array which is loaded
 	//from the JSON string
+  $('.thumbnail').attr("src", mImages[0].img);
 	console.log('swap photo');
 }
 
