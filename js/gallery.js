@@ -57,7 +57,25 @@ var mJson;
 var mUrl = 'images.json';
 
 //XMLHttpRequest function
+mRequest.onreadystatechange = function() {
+  //do something interesting if file is opened correctly
+  if (mRequest.readyState == 4 && mRequest.status == 200) {
+    try {
+      //parse the JSON file
+      mJson = JSON.parse(mRequest.responseText);
 
+      //loop through mJson array and instert into mImages arrow with GI objects
+
+      //printing out Json --> hopefully it shows object which means its working
+      console.log(mJson);
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
+};
+
+mRequest.open("GET", mUrl, true);
+mRequest.send();
 
 //GET request function
 //used to retrieve the file from the URL
