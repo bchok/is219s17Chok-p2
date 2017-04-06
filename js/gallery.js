@@ -79,14 +79,6 @@ $(document).ready( function() {
     /**$(this).addClass("rot270");**/
   });
 
-  /**$('#nextPhoto').hover(function(){
-    $(this).css("opacity", "0.5");
-  });
-
-  $('#prevPhoto').hover(function(){
-    $(this).css("opacity", "0.5");
-  });**/
-
 });
 
 window.addEventListener('load', function() {
@@ -95,10 +87,14 @@ window.addEventListener('load', function() {
 
 }, false);
 
-function GalleryImage() {
+function GalleryImage(location, description, date, img) {
 	//implement me as an object to hold the following data about an image:
 	//1. location where photo was taken
 	//2. description of photo
 	//3. the date when the photo was taken
 	//4. either a String (src URL) or an an HTMLImageObject (bitmap of the photo. https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement)
+  this.location = location;
+  this.description = description;
+  this.date = date;
+  this.img = img; 
 }
