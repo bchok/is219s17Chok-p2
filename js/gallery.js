@@ -45,7 +45,7 @@ function swapPhoto() {
       mCurrentIndex++;
   } else {
     mCurrentIndex = 0;
-    $('.thumbnail').attr("src", mImages[mCurrentIndex].img)
+    $('.thumbnail').attr("src", mImages[mCurrentIndex].img);
     $('.location').text("Location: " + mImages[mCurrentIndex].location);
     $('.description').text("Description: " + mImages[mCurrentIndex].description);
     $('.date').text("Date: " + mImages[mCurrentIndex].date);
@@ -130,12 +130,17 @@ $(document).ready( function() {
   //have the more indicator clickable
   $('.moreIndicator').click(function () {
     $('.details').eq(0).toggle();
-
     $(this).toggleClass("rot90 rot270");
-    /**$(this).addClass("rot270");**/
+  });
+
+  $('#nextPhoto').click(function () {
+    console.log("nextPhoto was clicked!")
+    swapPhoto();
+    mLastFrameTime = 0;
   });
 
 });
+
 
 window.addEventListener('load', function() {
 
