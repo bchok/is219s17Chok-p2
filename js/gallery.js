@@ -64,10 +64,16 @@ mRequest.onreadystatechange = function() {
       //parse the JSON file
       mJson = JSON.parse(mRequest.responseText);
 
-      //loop through mJson array and instert into mImages arrow with GI objects
 
+      //loop through mJson array and instert into mImages arrow with GI objects
+      for(var i = 0; i < mJson.images.length; i++){
+        console.log("looping!");
+        mImages.push(new GalleryImage(mJson.images[i].imgLocation, mJson.images[i].description, mJson.images[i].date, mJson.images[i].imgPath));
+      };
+      console.log(mImages);
       //printing out Json --> hopefully it shows object which means its working
       console.log(mJson);
+      console.log(mJson.images[0].date);
     } catch (err) {
       console.log(err.message);
     }
