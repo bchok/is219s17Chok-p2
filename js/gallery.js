@@ -39,10 +39,16 @@ function swapPhoto() {
 	//from the JSON string
   if(mCurrentIndex < mImages.length){
       $('.thumbnail').attr("src", mImages[mCurrentIndex].img);
+      $('.location').text("Location: " + mImages[mCurrentIndex].location);
+      $('.description').text("Description: " + mImages[mCurrentIndex].description);
+      $('.date').text("Date: " + mImages[mCurrentIndex].date);
       mCurrentIndex++;
   } else {
     mCurrentIndex = 0;
     $('.thumbnail').attr("src", mImages[mCurrentIndex].img)
+    $('.location').text("Location: " + mImages[mCurrentIndex].location);
+    $('.description').text("Description: " + mImages[mCurrentIndex].description);
+    $('.date').text("Date: " + mImages[mCurrentIndex].date);
     mCurrentIndex++;
   }
 	console.log('swap photo');
