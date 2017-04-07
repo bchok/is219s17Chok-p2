@@ -51,7 +51,7 @@ function swapPhoto() {
     $('.date').text("Date: " + mImages[mCurrentIndex].date);
     mCurrentIndex++;
   } else {
-    mCurrentIndex = mImages.length - 1;
+    mCurrentIndex = mImages.length + mCurrentIndex;
     $('.thumbnail').attr("src", mImages[mCurrentIndex].img);
     $('.location').text("Location: " + mImages[mCurrentIndex].location);
     $('.description').text("Description: " + mImages[mCurrentIndex].description);
