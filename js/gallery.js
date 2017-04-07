@@ -149,8 +149,13 @@ $(document).ready( function() {
     mLastFrameTime = 0;
   });
 
+  //for some reason can't get the index to change
+  //this function is broken
   $('#prevPhoto').click(function(){
     console.log("prevPhoto was clicked!");
+    mCurrentIndex -= 1;
+    swapPhoto();
+    mLastFrameTime = 0;
 
 
 
