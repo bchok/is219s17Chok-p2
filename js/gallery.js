@@ -75,7 +75,7 @@ function getQueryParams(qs) {
 }
 var $_GET = getQueryParams(document.location.search);
 
-if($_GET['fname'] == null){
+if($_GET['fname'] == null || $_GET['fname'] == ''){
   $_GET['fname'] = 'images.json';
 }
 
