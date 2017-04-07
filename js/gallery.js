@@ -75,8 +75,8 @@ function getQueryParams(qs) {
 }
 var $_GET = getQueryParams(document.location.search);
 
-if($_GET['fname'] == null || $_GET['fname'] == ''){
-  $_GET['fname'] = 'images.json';
+if($_GET['json'] == null || $_GET['json'] == ''){
+  $_GET['json'] = 'images.json';
 }
 
 // Counter for the mImages array
@@ -93,7 +93,7 @@ var mJson;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = $_GET['fname'];
+var mUrl = $_GET['json'];
 
 
 //XMLHttpRequest function
